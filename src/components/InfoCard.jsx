@@ -1,53 +1,48 @@
-import React from "react";
-import './InfoCard.css'; 
+import React, { useState } from "react";
 
-function InfoCard() {
-    return (
-        <div class="ui-cards">
-  <div class="card">
-    <div class="content">
-      <div class="header">Elliot Fu</div>
-      <div class="description">
-        Elliot Fu is a film-maker from New York.
-      </div>
+const InfoCard = ({ onAddProject }) => {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!title || !description) return;
+
+    onAddProject({ title, description });
+    setTitle("");
+    setDescription("");
+  };
+
+  return (
+    <div className="info-card">
+      <h2 style={{ textAlign: "center" }}>Add Project</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="title">Title</label>
+          <input
+            id="title"
+            type="text"
+            placeholder="Project Title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="desc">Description</label>
+          <textarea
+            id="desc"
+            rows="3"
+            placeholder="Project Description"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+        </div>
+
+        <button type="submit">Add</button>
+      </form>
     </div>
-    <div class="ui bottom attached button">
-      <i class="add icon"></i>
-      Add Friend
-    </div>
-  </div>
-  <div class="card">
-    <div class="content">
-      <div class="header">Veronika Ossi</div>
-      <div class="description">
-        Veronika Ossi is a set designer living in New York who enjoys kittens, music, and partying.
-      </div>
-    </div>
-    <div class="ui bottom attached button">
-      <i class="add icon"></i>
-      Add Friend
-    </div>
-  </div>
-  <div class="card">
-    <div class="content">
-      <div class="header">Jenny Hess</div>
-      <div class="description">
-        Jenny is a student studying Media Management at the New School
-      </div>
-    </div>
-    <div class="ui bottom attached button">
-      <i class="add icon"></i>
-      Add Friend
-    </div>
-  </div>
-</div>
-    )
-}
-
-
-
-
-
-
+  );
+};
 
 export default InfoCard;

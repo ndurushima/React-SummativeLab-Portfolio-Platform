@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
   return (
     <header>
-      <h1>Profile Platform</h1>
+      <h3 style={{ textAlign: "center" }}>Personal Project Showcase App</h3>
     </header>
   );
 };

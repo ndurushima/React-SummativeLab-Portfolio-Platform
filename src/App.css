@@ -1,42 +1,99 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* .info-card form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+} */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+  max-width: 500px;
+    
+}
+
+.form-group label {
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  color: black;
+}
+
+.info-card button {
+  padding: 0.5rem 1rem;
+  margin: 10px;
+  border-radius: 6px;
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+header {
+  width: 100%;
+  background-color: #222;
+  color: white;
+  padding: 2px;
   text-align: center;
+  font-size: 12=5px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.info-card {
+  margin: 10px;
+  max-width: 600px;
+  background-color: #f6f6f6;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info-card h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.project-card {
+  margin: 2rem auto;
+  max-width: 600px;
+  background-color: #f6f6f6;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.card {
-  padding: 2em;
+.project-card input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  color: black;
 }
 
-.read-the-docs {
-  color: #888;
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
 }
