@@ -8,17 +8,16 @@ const ProjectCard = ({ searchTerm, setSearchTerm, projects, onDelete }) => {
         placeholder="Search Projects"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        style={{ width: "100%", marginBottom: "1rem" }}
+        style={{ width: "90%", marginBottom: "1rem" }}
       />
       {projects.map((project, index) => (
         <div
           key={index}
           style={{
+            width: "90%",
             display: "flex",
             alignItems: "center",
             marginBottom: "1rem",
-            border: "1px solid #ccc",
-            borderRadius: "6px",
             padding: "0.5rem"
           }}
         >
@@ -29,12 +28,14 @@ const ProjectCard = ({ searchTerm, setSearchTerm, projects, onDelete }) => {
               fontSize: "1.5rem",
               border: "1px solid #999",
               background: "transparent",
-              borderRadius: "4px"
+              borderRadius: "4px",
+              color: "black",
+              cursor: "pointer",
             }}
           >
             ×
           </button>
-          <div>
+          <div className="project-details">
             <strong>{project.title}</strong>
             <p>{project.description}</p>
           </div>
